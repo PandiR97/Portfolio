@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandi Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="main">
+    <header >
+        <div class="header">
+            <nav >
+             <div class="header-title">
+                    <div class="header1">
+                     <img src="/0dd8b04a6d7eeb80b1e07123115c5a86.jpg" alt="" width="30px" id="tel1">
+                     <span id="tel2"><a href="index.html">PANDI R</a></span>
+                    </div>
+                    <div class="header2">
+                        <a href="project.html" id="tele">Projects</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="">Contact</a>
+                    </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+    <div class="repc">
+        <div>
+            <h1>GALLERY</h1>
+        </div>
+        <div>
+            <img src="/white-down-arrow-png-2.png" alt="" id="up" width="30px">  
+            <img src="/1.jpg" alt="" id="make-img" width="500px">
+            <img src="/white-down-arrow-png-2.png" alt="" id="down" width="30px">
+            
+        </div>
+
+    </div>
+
+    <script>
+        var pandi = ["/1.jpg", "/2.jpg","/4.jpg","/3.jpg"];
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+        var counter = 0
+
+        up.onclick = function ()
+        {
+            document.getElementById("make-img").src = pandi[counter];
+            counter = counter-1
+            if(counter == pandi.length){
+                counter = 0
+            }
+        }
+        down.onclick = function ()
+        {
+            document.getElementById("make-img").src = pandi[counter];
+            counter = counter+1
+            if(counter == pandi.length){
+                counter = 0
+            }
+        }
+        
+        
+
+    </script>
+</body>
+</html>
